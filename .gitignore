@@ -47,3 +47,10 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+#mesh files in .ply format- these are very big files
+#these will be available on the data dryad repository and/or Morphosource
+*.ply
+
+#output trees from BEAST- way too big!
+phylogeny_construction/BEAST2/mammal_tree.trees

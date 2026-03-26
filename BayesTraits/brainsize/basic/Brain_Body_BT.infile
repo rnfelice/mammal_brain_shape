@@ -1,0 +1,11 @@
+9
+2
+varrates
+stones 500 10000
+RJLockModel
+prior Beta-1 normal 0 2.5
+prior Beta-2 normal 0 2.5
+burnin 100000000
+iterations 1000000000
+sample 100000
+run

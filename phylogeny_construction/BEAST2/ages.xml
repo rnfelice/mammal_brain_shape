@@ -1,0 +1,826 @@
+                <distribution id="Adapis_parisiensis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Adapis_parisiensis_tip" spec="TaxonSet">
+                        <taxon idref="Adapis_parisiensis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Adapis_parisiensis" lower="33.9" name="distr" upper="41.03"/>
+                </distribution>
+
+                <distribution id="Adinotherium_ovinum_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Adinotherium_ovinum_tip" spec="TaxonSet">
+                        <taxon idref="Adinotherium_ovinum" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Adinotherium_ovinum" lower="16.3" name="distr" upper="17.5"/>
+                </distribution>
+
+                <distribution id="Aenocyon_dirus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Aenocyon_dirus_tip" spec="TaxonSet">
+                        <taxon idref="Aenocyon_dirus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Aenocyon_dirus" lower="0.014" name="distr" upper="2.58"/>
+                </distribution>
+
+                <distribution id="Agriochoerus_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Agriochoerus_sp_tip" spec="TaxonSet">
+                        <taxon idref="Agriochoerus_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Agriochoerus_sp" lower="29.5" name="distr" upper="31.8"/>
+                </distribution>
+
+                <distribution id="Albacetus_salvifactus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Albacetus_salvifactus_tip" spec="TaxonSet">
+                        <taxon idref="Albacetus_salvifactus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Albacetus_salvifactus" lower="7.8" name="distr" upper="8.37"/>
+                </distribution>
+
+                <distribution id="Amynodon_advenus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Amynodon_advenus_tip" spec="TaxonSet">
+                        <taxon idref="Amynodon_advenus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Amynodon_advenus" lower="39.7" name="distr" upper="45.9"/>
+                </distribution>
+
+                <distribution id="Anoplotherium_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Anoplotherium_sp_tip" spec="TaxonSet">
+                        <taxon idref="Anoplotherium_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Anoplotherium_sp" lower="33.9" name="distr" upper="37.71"/>
+                </distribution>
+
+                <distribution id="Apterodon_macrognathus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Apterodon_macrognathus_tip" spec="TaxonSet">
+                        <taxon idref="Apterodon_macrognathus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Apterodon_macrognathus" lower="27.3" name="distr" upper="37.71"/>
+                </distribution>
+
+                <distribution id="Archaeolemur_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Archaeolemur_sp_tip" spec="TaxonSet">
+                        <taxon idref="Archaeolemur_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Archaeolemur_sp" lower="0" name="distr" upper="0.0117"/>
+                </distribution>
+
+                <distribution id="Archaeotherium_mortoni_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Archaeotherium_mortoni_tip" spec="TaxonSet">
+                        <taxon idref="Archaeotherium_mortoni" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Archaeotherium_mortoni" lower="31.8" name="distr" upper="37"/>
+                </distribution>
+
+                <distribution id="Arctocyon_primaevus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Arctocyon_primaevus_tip" spec="TaxonSet">
+                        <taxon idref="Arctocyon_primaevus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Arctocyon_primaevus" lower="56" name="distr" upper="59.24"/>
+                </distribution>
+
+                <distribution id="Arctodus_simus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Arctodus_simus_tip" spec="TaxonSet">
+                        <taxon idref="Arctodus_simus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Arctodus_simus" lower="0.0117" name="distr" upper="4.7"/>
+                </distribution>
+
+                <distribution id="Argyrocetus_joaquinensis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Argyrocetus_joaquinensis_tip" spec="TaxonSet">
+                        <taxon idref="Argyrocetus_joaquinensis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Argyrocetus_joaquinensis" lower="23.04" name="distr" upper="27.3"/>
+                </distribution>
+
+                <distribution id="Aulophyseter_morricei_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Aulophyseter_morricei_tip" spec="TaxonSet">
+                        <taxon idref="Aulophyseter_morricei" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Aulophyseter_morricei" lower="13.82" name="distr" upper="15.98"/>
+                </distribution>
+
+                <distribution id="Australopithecus_africanus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Australopithecus_africanus_tip" spec="TaxonSet">
+                        <taxon idref="Australopithecus_africanus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Australopithecus_africanus" lower="2.58" name="distr" upper="5.3"/>
+                </distribution>
+
+                <distribution id="Babakotia_radofilai_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Babakotia_radofilai_tip" spec="TaxonSet">
+                        <taxon idref="Babakotia_radofilai" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Babakotia_radofilai" lower="0" name="distr" upper="0.0117"/>
+                </distribution>
+
+                <distribution id="Balbaroo_nalima_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Balbaroo_nalima_tip" spec="TaxonSet">
+                        <taxon idref="Balbaroo_nalima" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Balbaroo_nalima" lower="11.63" name="distr" upper="15.98"/>
+                </distribution>
+
+                <distribution id="Barinya_wangala_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Barinya_wangala_tip" spec="TaxonSet">
+                        <taxon idref="Barinya_wangala" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Barinya_wangala" lower="15.98" name="distr" upper="23.05"/>
+                </distribution>
+
+                <distribution id="Barylambda_schmidti_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Barylambda_schmidti_tip" spec="TaxonSet">
+                        <taxon idref="Barylambda_schmidti" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Barylambda_schmidti" lower="51.1" name="distr" upper="57.5"/>
+                </distribution>
+
+                <distribution id="Borhyaena_tuberata_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Borhyaena_tuberata_tip" spec="TaxonSet">
+                        <taxon idref="Borhyaena_tuberata" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Borhyaena_tuberata" lower="16.3" name="distr" upper="17.5"/>
+                </distribution>
+
+                <distribution id="Caenomeryx_filholi_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Caenomeryx_filholi_tip" spec="TaxonSet">
+                        <taxon idref="Caenomeryx_filholi" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Caenomeryx_filholi" lower="27.3" name="distr" upper="33.9"/>
+                </distribution>
+
+                <distribution id="Carpocyon_webbi_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Carpocyon_webbi_tip" spec="TaxonSet">
+                        <taxon idref="Carpocyon_webbi" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Carpocyon_webbi" lower="4.7" name="distr" upper="16.3"/>
+                </distribution>
+
+                <distribution id="Catonyx_tarijensis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Catonyx_tarijensis_tip" spec="TaxonSet">
+                        <taxon idref="Catonyx_tarijensis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Catonyx_tarijensis" lower="0.0117" name="distr" upper="5.333"/>
+                </distribution>
+
+                <distribution id="Cebochoerus_lacustris_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Cebochoerus_lacustris_tip" spec="TaxonSet">
+                        <taxon idref="Cebochoerus_lacustris" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Cebochoerus_lacustris" lower="33.9" name="distr" upper="37.71"/>
+                </distribution>
+
+                <distribution id="Cedromus_wilsoni_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Cedromus_wilsoni_tip" spec="TaxonSet">
+                        <taxon idref="Cedromus_wilsoni" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Cedromus_wilsoni" lower="29.5" name="distr" upper="33.9"/>
+                </distribution>
+
+                <distribution id="Chadronia_margaretae_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Chadronia_margaretae_tip" spec="TaxonSet">
+                        <taxon idref="Chadronia_margaretae" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Chadronia_margaretae" lower="33.9" name="distr" upper="37"/>
+                </distribution>
+
+                <distribution id="Cormohipparion_occidentale_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Cormohipparion_occidentale_tip" spec="TaxonSet">
+                        <taxon idref="Cormohipparion_occidentale" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Cormohipparion_occidentale" lower="2.48" name="distr" upper="12.5"/>
+                </distribution>
+
+                <distribution id="Cynodictis_cayluxi_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Cynodictis_cayluxi_tip" spec="TaxonSet">
+                        <taxon idref="Cynodictis_cayluxi" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Cynodictis_cayluxi" lower="27.3" name="distr" upper="48.07"/>
+                </distribution>
+
+                <distribution id="Cynohyaenodon_cayluxi_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Cynohyaenodon_cayluxi_tip" spec="TaxonSet">
+                        <taxon idref="Cynohyaenodon_cayluxi" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Cynohyaenodon_cayluxi" lower="33.9" name="distr" upper="41.03"/>
+                </distribution>
+
+                <distribution id="Desmathyus_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Desmathyus_sp_tip" spec="TaxonSet">
+                        <taxon idref="Desmathyus_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Desmathyus_sp" lower="13.82" name="distr" upper="27.3"/>
+                </distribution>
+
+                <distribution id="Dichobune_leporina_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Dichobune_leporina_tip" spec="TaxonSet">
+                        <taxon idref="Dichobune_leporina" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Dichobune_leporina" lower="33.9" name="distr" upper="37.71"/>
+                </distribution>
+
+                <distribution id="Diprotodon_optatum_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Diprotodon_optatum_tip" spec="TaxonSet">
+                        <taxon idref="Diprotodon_optatum" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Diprotodon_optatum" lower="0.0117" name="distr" upper="5.333"/>
+                </distribution>
+
+                <distribution id="Ekaltadeta_ima_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Ekaltadeta_ima_tip" spec="TaxonSet">
+                        <taxon idref="Ekaltadeta_ima" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Ekaltadeta_ima" lower="7.246" name="distr" upper="15.98"/>
+                </distribution>
+
+                <distribution id="Enaliarctos_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Enaliarctos_sp_tip" spec="TaxonSet">
+                        <taxon idref="Enaliarctos_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Enaliarctos_sp" lower="16.3" name="distr" upper="27.3"/>
+                </distribution>
+
+                <distribution id="Eusmilus_bidentatus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Eusmilus_bidentatus_tip" spec="TaxonSet">
+                        <taxon idref="Eusmilus_bidentatus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Eusmilus_bidentatus" lower="27.3" name="distr" upper="48.07"/>
+                </distribution>
+
+                <distribution id="Eutypomys_thompsoni_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Eutypomys_thompsoni_tip" spec="TaxonSet">
+                        <taxon idref="Eutypomys_thompsoni" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Eutypomys_thompsoni" lower="31.8" name="distr" upper="37"/>
+                </distribution>
+
+                <distribution id="Galadi_speciosus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Galadi_speciosus_tip" spec="TaxonSet">
+                        <taxon idref="Galadi_speciosus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Galadi_speciosus" lower="15.98" name="distr" upper="27.3"/>
+                </distribution>
+
+                <distribution id="Glossotherium_robustum_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Glossotherium_robustum_tip" spec="TaxonSet">
+                        <taxon idref="Glossotherium_robustum" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Glossotherium_robustum" lower="0.0117" name="distr" upper="2.58"/>
+                </distribution>
+
+                <distribution id="Glyptodon_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Glyptodon_sp_tip" spec="TaxonSet">
+                        <taxon idref="Glyptodon_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Glyptodon_sp" lower="0.0117" name="distr" upper="2.58"/>
+                </distribution>
+
+                <distribution id="Gustafsonia_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Gustafsonia_sp_tip" spec="TaxonSet">
+                        <taxon idref="Gustafsonia_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Gustafsonia_sp" lower="33.9" name="distr" upper="37"/>
+                </distribution>
+
+                <distribution id="Halitherium_schinzi_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Halitherium_schinzi_tip" spec="TaxonSet">
+                        <taxon idref="Halitherium_schinzi" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Halitherium_schinzi" lower="37.71" name="distr" upper="48.07"/>
+                </distribution>
+
+                <distribution id="Hapalops_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Hapalops_sp_tip" spec="TaxonSet">
+                        <taxon idref="Hapalops_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Hapalops_sp" lower="11" name="distr" upper="20.45"/>
+                </distribution>
+
+                <distribution id="Heptodon_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Heptodon_sp_tip" spec="TaxonSet">
+                        <taxon idref="Heptodon_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Heptodon_sp" lower="45.9" name="distr" upper="56"/>
+                </distribution>
+
+                <distribution id="Hesperocyon_gregarius_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Hesperocyon_gregarius_tip" spec="TaxonSet">
+                        <taxon idref="Hesperocyon_gregarius" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Hesperocyon_gregarius" lower="29.5" name="distr" upper="37"/>
+                </distribution>
+
+                <distribution id="Homalodotherium_cunninghami_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Homalodotherium_cunninghami_tip" spec="TaxonSet">
+                        <taxon idref="Homalodotherium_cunninghami" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Homalodotherium_cunninghami" lower="15.5" name="distr" upper="20.45"/>
+                </distribution>
+
+                <distribution id="Homotherium_serum_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Homotherium_serum_tip" spec="TaxonSet">
+                        <taxon idref="Homotherium_serum" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Homotherium_serum" lower="2.58" name="distr" upper="5.333"/>
+                </distribution>
+
+                <distribution id="Hyrachyus_modestus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Hyrachyus_modestus_tip" spec="TaxonSet">
+                        <taxon idref="Hyrachyus_modestus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Hyrachyus_modestus" lower="37.1" name="distr" upper="56"/>
+                </distribution>
+
+                <distribution id="Hyracotherium_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Hyracotherium_sp_tip" spec="TaxonSet">
+                        <taxon idref="Hyracotherium_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Hyracotherium_sp" lower="45.9" name="distr" upper="56"/>
+                </distribution>
+
+                <distribution id="Ignacius_graybullianus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Ignacius_graybullianus_tip" spec="TaxonSet">
+                        <taxon idref="Ignacius_graybullianus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Ignacius_graybullianus" lower="48.1" name="distr" upper="57.5"/>
+                </distribution>
+
+                <distribution id="Ischyromys_typus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Ischyromys_typus_tip" spec="TaxonSet">
+                        <taxon idref="Ischyromys_typus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Ischyromys_typus" lower="29.5" name="distr" upper="33.9"/>
+                </distribution>
+
+                <distribution id="Khirtharia_inflata_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Khirtharia_inflata_tip" spec="TaxonSet">
+                        <taxon idref="Khirtharia_inflata" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Khirtharia_inflata" lower="37.71" name="distr" upper="56"/>
+                </distribution>
+
+                <distribution id="Kryptobaatar_dashzevegi_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Kryptobaatar_dashzevegi_tip" spec="TaxonSet">
+                        <taxon idref="Kryptobaatar_dashzevegi" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Kryptobaatar_dashzevegi" lower="72.2" name="distr" upper="83.6"/>
+                </distribution>
+
+                <distribution id="Leontinia_gaudryi_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Leontinia_gaudryi_tip" spec="TaxonSet">
+                        <taxon idref="Leontinia_gaudryi" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Leontinia_gaudryi" lower="21" name="distr" upper="33.9"/>
+                </distribution>
+
+                <distribution id="Leptauchenia_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Leptauchenia_sp_tip" spec="TaxonSet">
+                        <taxon idref="Leptauchenia_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Leptauchenia_sp" lower="18.5" name="distr" upper="33.9"/>
+                </distribution>
+
+                <distribution id="Leptictis_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Leptictis_sp_tip" spec="TaxonSet">
+                        <taxon idref="Leptictis_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Leptictis_sp" lower="29.5" name="distr" upper="39.7"/>
+                </distribution>
+
+                <distribution id="Leptocyon_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Leptocyon_sp_tip" spec="TaxonSet">
+                        <taxon idref="Leptocyon_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Leptocyon_sp" lower="9.4" name="distr" upper="29.5"/>
+                </distribution>
+
+                <distribution id="Megacerops_coloradensis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Megacerops_coloradensis_tip" spec="TaxonSet">
+                        <taxon idref="Megacerops_coloradensis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Megacerops_coloradensis" lower="33.9" name="distr" upper="39.7"/>
+                </distribution>
+
+                <distribution id="Megaladapis_madagascariensis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Megaladapis_madagascariensis_tip" spec="TaxonSet">
+                        <taxon idref="Megaladapis_madagascariensis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Megaladapis_madagascariensis" lower="0" name="distr" upper="0.0117"/>
+                </distribution>
+
+                <distribution id="Megalagus_turgidus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Megalagus_turgidus_tip" spec="TaxonSet">
+                        <taxon idref="Megalagus_turgidus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Megalagus_turgidus" lower="31.8" name="distr" upper="37"/>
+                </distribution>
+
+                <distribution id="Megalonyx_jeffersonii_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Megalonyx_jeffersonii_tip" spec="TaxonSet">
+                        <taxon idref="Megalonyx_jeffersonii" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Megalonyx_jeffersonii" lower="0.0117" name="distr" upper="2.58"/>
+                </distribution>
+
+                <distribution id="Megatherium_americanum_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Megatherium_americanum_tip" spec="TaxonSet">
+                        <taxon idref="Megatherium_americanum" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Megatherium_americanum" lower="0.0117" name="distr" upper="8"/>
+                </distribution>
+
+                <distribution id="Merychippus_severus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Merychippus_severus_tip" spec="TaxonSet">
+                        <taxon idref="Merychippus_severus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Merychippus_severus" lower="9.4" name="distr" upper="18.5"/>
+                </distribution>
+
+                <distribution id="Merycochoerus_proprius_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Merycochoerus_proprius_tip" spec="TaxonSet">
+                        <taxon idref="Merycochoerus_proprius" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Merycochoerus_proprius" lower="16.3" name="distr" upper="23.04"/>
+                </distribution>
+
+                <distribution id="Mesatirhinus_junius_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Mesatirhinus_junius_tip" spec="TaxonSet">
+                        <taxon idref="Mesatirhinus_junius" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Mesatirhinus_junius" lower="39.7" name="distr" upper="51.1"/>
+                </distribution>
+
+                <distribution id="Mesogaulus_paniensis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Mesogaulus_paniensis_tip" spec="TaxonSet">
+                        <taxon idref="Mesogaulus_paniensis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Mesogaulus_paniensis" lower="15.98" name="distr" upper="23.04"/>
+                </distribution>
+
+                <distribution id="Mesohippus_bairdi_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Mesohippus_bairdi_tip" spec="TaxonSet">
+                        <taxon idref="Mesohippus_bairdi" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Mesohippus_bairdi" lower="31.8" name="distr" upper="37"/>
+                </distribution>
+
+                <distribution id="Microchoerus_erinaceus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Microchoerus_erinaceus_tip" spec="TaxonSet">
+                        <taxon idref="Microchoerus_erinaceus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Microchoerus_erinaceus" lower="33.9" name="distr" upper="41"/>
+                </distribution>
+
+                <distribution id="Microsyops_annectens_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Microsyops_annectens_tip" spec="TaxonSet">
+                        <taxon idref="Microsyops_annectens" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Microsyops_annectens" lower="39.7" name="distr" upper="45.9"/>
+                </distribution>
+
+                <distribution id="Mixtotherium_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Mixtotherium_sp_tip" spec="TaxonSet">
+                        <taxon idref="Mixtotherium_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Mixtotherium_sp" lower="37.71" name="distr" upper="48.07"/>
+                </distribution>
+
+                <distribution id="Mouillacitherium_elegans_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Mouillacitherium_elegans_tip" spec="TaxonSet">
+                        <taxon idref="Mouillacitherium_elegans" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Mouillacitherium_elegans" lower="33.9" name="distr" upper="48.07"/>
+                </distribution>
+
+                <distribution id="Mylodon_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Mylodon_sp_tip" spec="TaxonSet">
+                        <taxon idref="Mylodon_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Mylodon_sp" lower="0.0117" name="distr" upper="2.58"/>
+                </distribution>
+
+                <distribution id="Necrolemur_antiquus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Necrolemur_antiquus_tip" spec="TaxonSet">
+                        <taxon idref="Necrolemur_antiquus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Necrolemur_antiquus" lower="27.3" name="distr" upper="41"/>
+                </distribution>
+
+                <distribution id="Neohelos_stirtoni_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Neohelos_stirtoni_tip" spec="TaxonSet">
+                        <taxon idref="Neohelos_stirtoni" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Neohelos_stirtoni" lower="7.246" name="distr" upper="23.04"/>
+                </distribution>
+
+                <distribution id="Nesodon_imbricatus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Nesodon_imbricatus_tip" spec="TaxonSet">
+                        <taxon idref="Nesodon_imbricatus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Nesodon_imbricatus" lower="15.5" name="distr" upper="29"/>
+                </distribution>
+
+                <distribution id="Nimbacinus_dicksoni_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Nimbacinus_dicksoni_tip" spec="TaxonSet">
+                        <taxon idref="Nimbacinus_dicksoni" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Nimbacinus_dicksoni" lower="15.98" name="distr" upper="23.04"/>
+                </distribution>
+
+                <distribution id="Nimbadon_lavarackorum_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Nimbadon_lavarackorum_tip" spec="TaxonSet">
+                        <taxon idref="Nimbadon_lavarackorum" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Nimbadon_lavarackorum" lower="11.63" name="distr" upper="15.98"/>
+                </distribution>
+
+                <distribution id="Notharctus_tenebrosus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Notharctus_tenebrosus_tip" spec="TaxonSet">
+                        <taxon idref="Notharctus_tenebrosus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Notharctus_tenebrosus" lower="46.2" name="distr" upper="50.5"/>
+                </distribution>
+
+                <distribution id="Nothrotheriops_shastensis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Nothrotheriops_shastensis_tip" spec="TaxonSet">
+                        <taxon idref="Nothrotheriops_shastensis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Nothrotheriops_shastensis" lower="0.0117" name="distr" upper="2.58"/>
+                </distribution>
+
+                <distribution id="Obdurodon_dicksoni_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Obdurodon_dicksoni_tip" spec="TaxonSet">
+                        <taxon idref="Obdurodon_dicksoni" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Obdurodon_dicksoni" lower="11.63" name="distr" upper="15.98"/>
+                </distribution>
+
+                <distribution id="Oxydactylus_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Oxydactylus_sp_tip" spec="TaxonSet">
+                        <taxon idref="Oxydactylus_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Oxydactylus_sp" lower="11.63" name="distr" upper="23.1"/>
+                </distribution>
+
+                <distribution id="Palaeolama_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Palaeolama_sp_tip" spec="TaxonSet">
+                        <taxon idref="Palaeolama_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Palaeolama_sp" lower="0.0117" name="distr" upper="2.58"/>
+                </distribution>
+
+                <distribution id="Palaeosyops_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Palaeosyops_sp_tip" spec="TaxonSet">
+                        <taxon idref="Palaeosyops_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Palaeosyops_sp" lower="45.9" name="distr" upper="56"/>
+                </distribution>
+
+                <distribution id="Paracynarctus_sinclairi_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Paracynarctus_sinclairi_tip" spec="TaxonSet">
+                        <taxon idref="Paracynarctus_sinclairi" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Paracynarctus_sinclairi" lower="12.5" name="distr" upper="18.5"/>
+                </distribution>
+
+                <distribution id="Paramylodon_harlani_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Paramylodon_harlani_tip" spec="TaxonSet">
+                        <taxon idref="Paramylodon_harlani" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Paramylodon_harlani" lower="0.0117" name="distr" upper="4.7"/>
+                </distribution>
+
+                <distribution id="Paramys_delicatus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Paramys_delicatus_tip" spec="TaxonSet">
+                        <taxon idref="Paramys_delicatus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Paramys_delicatus" lower="45.9" name="distr" upper="51.1"/>
+                </distribution>
+
+                <distribution id="Parapithecus_grangeri_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Parapithecus_grangeri_tip" spec="TaxonSet">
+                        <taxon idref="Parapithecus_grangeri" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Parapithecus_grangeri" lower="27.3" name="distr" upper="33.9"/>
+                </distribution>
+
+                <distribution id="Patriomanis_americana_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Patriomanis_americana_tip" spec="TaxonSet">
+                        <taxon idref="Patriomanis_americana" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Patriomanis_americana" lower="33.9" name="distr" upper="37"/>
+                </distribution>
+
+                <distribution id="Phenacodus_primaevus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Phenacodus_primaevus_tip" spec="TaxonSet">
+                        <taxon idref="Phenacodus_primaevus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Phenacodus_primaevus" lower="45.9" name="distr" upper="63.4"/>
+                </distribution>
+
+                <distribution id="Platygonus_compressus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Platygonus_compressus_tip" spec="TaxonSet">
+                        <taxon idref="Platygonus_compressus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Platygonus_compressus" lower="0.0117" name="distr" upper="3.6"/>
+                </distribution>
+
+                <distribution id="Plionictis_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Plionictis_sp_tip" spec="TaxonSet">
+                        <taxon idref="Plionictis_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Plionictis_sp" lower="4.7" name="distr" upper="16.3"/>
+                </distribution>
+
+                <distribution id="Promartes_olcotti_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Promartes_olcotti_tip" spec="TaxonSet">
+                        <taxon idref="Promartes_olcotti" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Promartes_olcotti" lower="18.5" name="distr" upper="24.7"/>
+                </distribution>
+
+                <distribution id="Proscelidodon_patrius_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Proscelidodon_patrius_tip" spec="TaxonSet">
+                        <taxon idref="Proscelidodon_patrius" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Proscelidodon_patrius" lower="3" name="distr" upper="5.3"/>
+                </distribution>
+
+                <distribution id="Prospaniomys_priscus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Prospaniomys_priscus_tip" spec="TaxonSet">
+                        <taxon idref="Prospaniomys_priscus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Prospaniomys_priscus" lower="17.5" name="distr" upper="21"/>
+                </distribution>
+
+                <distribution id="Proterotherium_cavum_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Proterotherium_cavum_tip" spec="TaxonSet">
+                        <taxon idref="Proterotherium_cavum" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Proterotherium_cavum" lower="16.3" name="distr" upper="17.5"/>
+                </distribution>
+
+                <distribution id="Protocetus_atavus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Protocetus_atavus_tip" spec="TaxonSet">
+                        <taxon idref="Protocetus_atavus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Protocetus_atavus" lower="41.03" name="distr" upper="48.07"/>
+                </distribution>
+
+                <distribution id="Protosciurus_rachelae_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Protosciurus_rachelae_tip" spec="TaxonSet">
+                        <taxon idref="Protosciurus_rachelae" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Protosciurus_rachelae" lower="18.5" name="distr" upper="29.5"/>
+                </distribution>
+
+                <distribution id="Protypotherium_australe_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Protypotherium_australe_tip" spec="TaxonSet">
+                        <taxon idref="Protypotherium_australe" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Protypotherium_australe" lower="15.5" name="distr" upper="17.5"/>
+                </distribution>
+
+                <distribution id="Pseudaelurus_validus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Pseudaelurus_validus_tip" spec="TaxonSet">
+                        <taxon idref="Pseudaelurus_validus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Pseudaelurus_validus" lower="16.3" name="distr" upper="18.5"/>
+                </distribution>
+
+                <distribution id="Pseudhipparion_gratum_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Pseudhipparion_gratum_tip" spec="TaxonSet">
+                        <taxon idref="Pseudhipparion_gratum" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Pseudhipparion_gratum" lower="2.58" name="distr" upper="12.5"/>
+                </distribution>
+
+                <distribution id="Pseudotomus_horribilis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Pseudotomus_horribilis_tip" spec="TaxonSet">
+                        <taxon idref="Pseudotomus_horribilis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Pseudotomus_horribilis" lower="45.9" name="distr" upper="51.1"/>
+                </distribution>
+
+                <distribution id="Pseudotypotherium_pseudopachygnathum_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Pseudotypotherium_pseudopachygnathum_tip" spec="TaxonSet">
+                        <taxon idref="Pseudotypotherium_pseudopachygnathum" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Pseudotypotherium_pseudopachygnathum" lower="2.58" name="distr" upper="11.63"/>
+                </distribution>
+
+                <distribution id="Quercygale_angustidens_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Quercygale_angustidens_tip" spec="TaxonSet">
+                        <taxon idref="Quercygale_angustidens" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Quercygale_angustidens" lower="33.9" name="distr" upper="41.03"/>
+                </distribution>
+
+                <distribution id="Rapamys_atramontis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Rapamys_atramontis_tip" spec="TaxonSet">
+                        <taxon idref="Rapamys_atramontis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Rapamys_atramontis" lower="37" name="distr" upper="45.9"/>
+                </distribution>
+
+                <distribution id="Rooneyia_viejaensis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Rooneyia_viejaensis_tip" spec="TaxonSet">
+                        <taxon idref="Rooneyia_viejaensis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Rooneyia_viejaensis" lower="37" name="distr" upper="39.7"/>
+                </distribution>
+
+                <distribution id="Silvabestius_johnnilandi_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Silvabestius_johnnilandi_tip" spec="TaxonSet">
+                        <taxon idref="Silvabestius_johnnilandi" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Silvabestius_johnnilandi" lower="15.98" name="distr" upper="27.3"/>
+                </distribution>
+
+                <distribution id="Simosthenurus_occidentalis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Simosthenurus_occidentalis_tip" spec="TaxonSet">
+                        <taxon idref="Simosthenurus_occidentalis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Simosthenurus_occidentalis" lower="0.0117" name="distr" upper="5.333"/>
+                </distribution>
+
+                <distribution id="Smilodectes_gracilis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Smilodectes_gracilis_tip" spec="TaxonSet">
+                        <taxon idref="Smilodectes_gracilis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Smilodectes_gracilis" lower="46.2" name="distr" upper="50.5"/>
+                </distribution>
+
+                <distribution id="Smilodon_fatalis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Smilodon_fatalis_tip" spec="TaxonSet">
+                        <taxon idref="Smilodon_fatalis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Smilodon_fatalis" lower="0.21" name="distr" upper="1.4"/>
+                </distribution>
+
+                <distribution id="Thalassocnus_natans_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Thalassocnus_natans_tip" spec="TaxonSet">
+                        <taxon idref="Thalassocnus_natans" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Thalassocnus_natans" lower="5.333" name="distr" upper="7.246"/>
+                </distribution>
+
+                <distribution id="Thylacoleo_carnifex_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Thylacoleo_carnifex_tip" spec="TaxonSet">
+                        <taxon idref="Thylacoleo_carnifex" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Thylacoleo_carnifex" lower="0.645" name="distr" upper="5.333"/>
+                </distribution>
+
+                <distribution id="Titanoides_primaevus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Titanoides_primaevus_tip" spec="TaxonSet">
+                        <taxon idref="Titanoides_primaevus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Titanoides_primaevus" lower="56" name="distr" upper="66"/>
+                </distribution>
+
+                <distribution id="Trogosus_hillsii_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Trogosus_hillsii_tip" spec="TaxonSet">
+                        <taxon idref="Trogosus_hillsii" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Trogosus_hillsii" lower="45.9" name="distr" upper="56"/>
+                </distribution>
+
+                <distribution id="Typotheriopsis_sp_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Typotheriopsis_sp_tip" spec="TaxonSet">
+                        <taxon idref="Typotheriopsis_sp" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Typotheriopsis_sp" lower="3" name="distr" upper="11.63"/>
+                </distribution>
+
+                <distribution id="Uintatherium_anceps_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Uintatherium_anceps_tip" spec="TaxonSet">
+                        <taxon idref="Uintatherium_anceps" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Uintatherium_anceps" lower="39.7" name="distr" upper="51.1"/>
+                </distribution>
+
+                <distribution id="Ustatochoerus_profectus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Ustatochoerus_profectus_tip" spec="TaxonSet">
+                        <taxon idref="Ustatochoerus_profectus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Ustatochoerus_profectus" lower="4.7" name="distr" upper="23.04"/>
+                </distribution>
+
+                <distribution id="Yalkaparidon_coheni_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Yalkaparidon_coheni_tip" spec="TaxonSet">
+                        <taxon idref="Yalkaparidon_coheni" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Yalkaparidon_coheni" lower="15.98" name="distr" upper="23.04"/>
+                </distribution>
+
+                <distribution id="Zodiolestes_daimonedlixensis_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Zodiolestes_daimonedlixensis_tip" spec="TaxonSet">
+                        <taxon idref="Zodiolestes_daimonedlixensis" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Zodiolestes_daimonedlixensis" lower="16.3" name="distr" upper="23.1"/>
+                </distribution>
+
+                <distribution id="Zygomaturus_trilobus_tip.prior" spec="sa.math.distributions.SAMRCAPrior" tipsonly="true" tree="@Tree.t:tree">
+                    <taxonset id="Zygomaturus_trilobus_tip" spec="TaxonSet">
+                        <taxon idref="Zygomaturus_trilobus" spec="Taxon"/>
+                    </taxonset>
+                    <Uniform id="Uniform.Zygomaturus_trilobus" lower="0.035" name="distr" upper="7.246"/>
+                </distribution>
+
