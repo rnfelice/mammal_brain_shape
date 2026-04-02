@@ -1,15 +1,50 @@
 # Data and Code from Knapp et al.
-This repository contains all data and code for carrying out the analyses in _Title of the paper goes here_. 
+This repository contains all data and code for carrying out the analyses in _Mosaic evolution of brain shape and size in mammals_. 
 
-## Folders:
+## Overview:
 
-📁 BayesTraits: this folder contains the script `BT_input_prep.R`. This script is used to prepare the inputs for BayesTraits evolutionary rate analyses has everal functions: (1) Carry out phylogenetic PCA to reduce the dimensionality of the Procrustes-aligned landmark data (2) create BayesTraits command file (3) organise these input files into folders to analyses the evolutiooanry rates of the whole endocasts and each subregion (cerebellum, neocortex, olfactory lobe and brainstem).
+📁 BayesTraits: Code for carrying out BayesTraits analyses and processing results
+📁 endocat_pts: Raw 3D landmark configurations
+📁 input_data: Morphometric, ecological, phylogenetic, and body size data for analyses
+📁 mvMORPH: Code for evolutionary rate analysis with mvMORPH
+📁 phylogeny_construction: code for building dated supertrees with BEAST 2
+📁 ply_ASCII: 
+📁 scripts: R scripts for comparative analyses including convergent evolution tests
 
-Other contents of this folder is the subfolder 📁 brainsize which does the same task for preparing inputs for the variable-rates phylogenetic regression in BayesTriats to analyse brain size allometry evolution. Finally, the R script `compare_bayes_factors.R` is used to compare the marginal likelihoods of BayesTraits results for model selection. 
+## Detailed Folder Contents
+
+📁 BayesTraits: this folder contains the script `BT_input_prep.R`. This script is used to prepare the inputs for BayesTraits evolutionary rate analyses has everal functions: (1) Carry out phylogenetic PCA to reduce the dimensionality of the Procrustes-aligned landmark data (2) create BayesTraits command file (3) organise these input files into folders to analyses the evolutiooanry rates of the whole endocasts and each subregion (cerebellum, neocortex, olfactory lobe and brainstem). 
+
+Other contents of this folder:
+
+📁 brainsize: which does the same task for preparing inputs for the variable-rates phylogenetic regression in BayesTriats to analyse brain size allometry evolution. 
+📁 postprocessing: contains the processed output of the BayesTraits models with the highest marginal likelihood. The raw output files from BayesTraits were post-processed using the variable-rates postprocessor here https://www.evolution.reading.ac.uk/VarRatesWebPP/
+
+Finally, several R scripts provide the analysis and plotting code for the results of the BayesTraits analyses:
+`check_convergence.R` uses Gelman-Rubin test diagnostic to confirm good convergence of MCMC chains
+`compare_alternative_topologies.R` Makes the supplemental tree and rate-through-time figures for all 8 alternative phylogenetic hypotheses 
+`compare_bayes_factors.R` is used to compare the marginal likelihoods of BayesTraits results for model selection. Makes figures S21-S33
+`plot_figure_2.R` Makes main text figure 2
+`plot_rates_per_region.R` makes main text figure 3 and supplmental figure S16
 
 ---
 
-📁 endocast_pts: this folder contains the raw (i.e., not Procrustes-aligned) landmark and semilandmark data for all specimens
+📂input_data: raw data for the analyses
+
+📦input_data
+ ┣ 📂plotting_links: files for making connections between landmark points in plots
+ ┣ 📜.DS_Store
+ ┣ 📜Proc.endo.mammals.rda: raw output of Procrustes alignment containing coordinates, centroid size, mean shape, etc
+ ┣ 📜centroid_sizes.csv: centroid size of landmark configurations
+ ┣ 📜mammal_data.csv: taxonomic, ecological, life history, and body size data for all taxa. Importantly, this file also contains links to the original source files for the 3D scan and/or 3D model data for each specimen in the dataset
+ ┣ 📜mammaltree4705_editednames.nex: phylogeny from Alvarez Carretero et al with genus names modified to be capitalized
+ ┣ 📜procrutes_aligned_coords.csv: Procrustes aligned landmark configurations
+ ┗ 📜raw_landmark_coords.csv: Landmark data with semilandmarks having been slid to minimize bending energy. Not Procrustes aligned.
+
+---
+
+📁 mvMORPH: These scripts are used to compare rates of evolution across ecological/behavioral groups using the mvMORPH R pacakge and create figures 4 and S17-18. `mvMORPH_hyp1.R` analyses per-group rates with phylogenetic hypothesis 1. `mvMORPH_hyp4.R` carries out a sensitivity analysis with an alternative phylogenetic hypotheis with Pantodonta, Brontotheriidae, and Creodonta in alternative positions in the tree. `mvMORPH_no_cetaceans_anthropoids.R` carries out a sensitivity analysis with phylogenetic hypotheis 1 with but the potentially influential outlier groups Cetacea (whales) and Anthropods (humans and close relatives) removed. 
+
 
 ---
 
@@ -26,4 +61,23 @@ Other contents of this folder is the subfolder 📁 brainsize which does the sam
     ┣ alternate_topologies.csv
 
 
-The first four numbered scripts build an informal supertree by grafting together three dated phylogenies and several additional tips. We then carry out a tip-dating analysis using BEAST2. First we used BEAUTi to make `BEAST2/initial_beast_input_file.xml`, then the script `5_make_additional_tip_and_node_priors.R` produces several other xml files containing additional priors for the BEAST analysis and writes them into the 📁 BEAST2 folder. We then manually edited BEAST xml file, adding those additional priors, to make `BEAST2/updated_beast_input_file.xml`. That xml is executed in BEAST2, producing a posterior distribution of trees. We used TreeAnnotator to produce a single summary tree (maximum clade credibility with mean node heights)
+The first four numbered scripts build an informal supertree by grafting together three dated phylogenies and several additional tips. We then carry out a tip-dating analysis using BEAST2. First we used BEAUTi to make `BEAST2/initial_beast_input_file.xml`, then the script `5_make_additional_tip_and_node_priors.R` produces several other xml files containing additional priors for the BEAST analysis and writes them into the 📁 BEAST2 folder. We then manually edited BEAST xml file, adding those additional priors, to make `BEAST2/updated_beast_input_file.xml`. That xml is executed in BEAST2, producing a posterior distribution of trees. We used TreeAnnotator to produce a single summary tree (maximum clade credibility with mean node heights). Finally, `6_make_alternative_toplogies.R` uses the `move.lineage` function in the RRPhylo R package to create alternative phylogenetic hypotheses by moving clades with uncertain phylogenetic affinities to alternative parts of the tree. the folder 📁 input_trees contains the published time trees used to assemble our supertree topology. The results are the 8 numbered nexus files `final_tree_hyp1.nex` through `final_tree_hyp8.nex` which are used for all comparative analyses and evolutionary models. 
+
+---
+
+📂ply_ASCII: contains the 3D mesh file for *Abrocoma cinerea*. Used for plotting. This model corresponds to this Morphosource record: https://n2t.net/ark:/87602/m4/M141118 
+
+---
+📁 scripts: Contains R scripts for main analyses
+
+📦scripts
+ ┣ 📂utilities
+ ┃ ┣ 📜BayesTraitsModelComparison.R: source scripts for model comparison including calculating and plotting BayesFactors
+ ┃ ┣ 📜BayesTraitsPlottingFunctions.R: source scripts for reading BayesTraits results into R
+ ┃ ┗ 📜Functions.R: additional utility functions for reading and manipulating landmark data
+ ┣ 📜1_Procrustes_alignment_and_PCA.R: Carry out PCA and make morphospace plots 
+ ┣ 📜2_allometry.R: calculate phylogenetic regressions to test allometry
+ ┣ 📜3_PhySig_and_rates.R: calculate phylogenetic signal evolutionary rates (sigma mult)
+ ┣ 📜4_convergent_evolution_script.R: test convergent evolution (Fig S3)
+ ┗ 📜5_brain_region_analysis.R: make per-region morphospace plots (Fig S12-S15)
+
