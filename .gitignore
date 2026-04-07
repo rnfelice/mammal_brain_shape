@@ -54,3 +54,6 @@ rsconnect/
 
 #output trees from BEAST- way too big!
 phylogeny_construction/BEAST2/mammal_tree.trees
+
+#dont include the ugly Mac DS_Store files
+.DS_Store
