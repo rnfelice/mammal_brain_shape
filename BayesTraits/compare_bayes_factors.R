@@ -95,13 +95,13 @@ for (i in 1:length(stones_results)) {
       legend.title = element_text(size = 9)
     )
   # save:
-  ggsave(paste0(figure_folder, "Figure_S", 20 + i, ".pdf"),
+  ggsave(paste0(figure_folder, "Figure_S", 19 + i, ".pdf"),
     plot = g,
     height = 7,
     width = 7,
     units = "in"
   )
-  ggsave(paste0(figure_folder, "Figure_S", 20 + i, ".tif"),
+  ggsave(paste0(figure_folder, "Figure_S", 19 + i, ".tif"),
     plot = g,
     height = 7,
     width = 7,
@@ -177,13 +177,13 @@ g <- g +
   )
 
 g
-ggsave(paste0(figure_folder, "Figure_S", 20 + length(stones_results) + 1, ".pdf"),
+ggsave(paste0(figure_folder, "Figure_S", 19 + length(stones_results) + 1, ".pdf"),
   plot = g,
   height = 7,
   width = 7,
   units = "in"
 )
-ggsave(paste0(figure_folder, "Figure_S", 20 + length(stones_results) + 1, ".tif"),
+ggsave(paste0(figure_folder, "Figure_S", 19 + length(stones_results) + 1, ".tif"),
   plot = g,
   height = 7,
   width = 7,

@@ -29,7 +29,7 @@ Other contents of this folder:
 Finally, several R scripts provide the analysis and plotting code for the results of the BayesTraits analyses:
 `check_convergence.R` uses Gelman-Rubin test diagnostic to confirm good convergence of MCMC chains
 `compare_alternative_topologies.R` Makes the supplemental tree and rate-through-time figures for all 8 alternative phylogenetic hypotheses 
-`compare_bayes_factors.R` is used to compare the marginal likelihoods of BayesTraits results for model selection. Makes figures S21-S33
+`compare_bayes_factors.R` is used to compare the marginal likelihoods of BayesTraits results for model selection. Makes figures S19-S31
 `plot_figure_2.R` Makes main text figure 2
 `plot_rates_per_region.R` makes main text figure 3 and supplmental figure S16
 
