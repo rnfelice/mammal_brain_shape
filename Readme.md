@@ -1,5 +1,6 @@
 # Data and Code from Knapp et al.
-This repository contains all data and code for carrying out the analyses in _Mosaic evolution of brain shape and size in mammals_. 
+This repository contains all data and code for carrying out the analyses in _Rapid evolution of mammalian brain shape precedes encephalization
+across the K-Pg boundary_. 
 
 ## Overview:
 
@@ -29,7 +30,7 @@ Other contents of this folder:
 Finally, several R scripts provide the analysis and plotting code for the results of the BayesTraits analyses:
 `check_convergence.R` uses Gelman-Rubin test diagnostic to confirm good convergence of MCMC chains
 `compare_alternative_topologies.R` Makes the supplemental tree and rate-through-time figures for all 8 alternative phylogenetic hypotheses 
-`compare_bayes_factors.R` is used to compare the marginal likelihoods of BayesTraits results for model selection. Makes figures S19-S31
+`compare_bayes_factors.R` is used to compare the marginal likelihoods of BayesTraits results for model selection. Makes figures S20-S32
 `plot_figure_2.R` Makes main text figure 2
 `plot_rates_per_region.R` makes main text figure 3 and supplmental figure S16
 
@@ -46,7 +47,7 @@ Finally, several R scripts provide the analysis and plotting code for the result
     ┣ 📜procrutes_aligned_coords.csv
     ┗ 📜raw_landmark_coords.csv
 
-📂plotting_links contains files for making connections between landmark points in plots (e.g., Figs S12-S15). `Proc.endo.mammals.rda` is the raw output of Procrustes alignment containing coordinates, centroid size, mean shape, etc. `centroid_sizes.csv` contains the centroid size of landmark configurations. `mammal_data.csv` contains the taxonomic, ecological, life history, and body size data for all taxa. Importantly, this file also contains links to the original source files for the 3D scan and/or 3D model data for each specimen in the dataset. `mammaltree4705_editednames.nex` is the phylogeny from Alvarez Carretero et al with genus names modified to be capitalized. `procrutes_aligned_coords.csv` contains the Procrustes-aligned landmark configurations whereas `raw_landmark_coords.csv` is the landmark data with semilandmarks having been slid to minimize bending energy but not yet Procrustes aligned.
+📂plotting_links contains files for making connections between landmark points in plots (e.g., Figs S13-S16). `Proc.endo.mammals.rda` is the raw output of Procrustes alignment containing coordinates, centroid size, mean shape, etc. `centroid_sizes.csv` contains the centroid size of landmark configurations. `mammal_data.csv` contains the taxonomic, ecological, life history, and body size data for all taxa. Importantly, this file also contains links to the original source files for the 3D scan and/or 3D model data for each specimen in the dataset. `mammaltree4705_editednames.nex` is the phylogeny from Alvarez Carretero et al with genus names modified to be capitalized. `procrutes_aligned_coords.csv` contains the Procrustes-aligned landmark configurations whereas `raw_landmark_coords.csv` is the landmark data with semilandmarks having been slid to minimize bending energy but not yet Procrustes aligned.
 
 ---
 
@@ -88,5 +89,5 @@ The first four numbered scripts build an informal supertree by grafting together
     ┣ 📜4_convergent_evolution_script.R
     ┗ 📜5_brain_region_analysis.R
 
-📂utilities contains utility functions for reading and manipulating landmark data, model comparison including calculating and plotting BayesFactors, and functions for reading BayesTraits results into R.`1_Procrustes_alignment_and_PCA.R` Carries out PCA and make morphospace plots. `2_allometry.R` fits phylogenetic regressions to test allometric effects. `3_PhySig_and_rates.R` calculates phylogenetic signal evolutionary rates (sigma mult). `4_convergent_evolution_script.R` tests convergent evolution (Fig S3). `5_brain_region_analysis.R` makes per-region morphospace plots (Fig S12-S15)
+📂utilities contains utility functions for reading and manipulating landmark data, model comparison including calculating and plotting BayesFactors, and functions for reading BayesTraits results into R.`1_Procrustes_alignment_and_PCA.R` Carries out PCA and make morphospace plots. `2_allometry.R` fits phylogenetic regressions to test allometric effects. `3_PhySig_and_rates.R` calculates phylogenetic signal evolutionary rates (sigma mult). `4_convergent_evolution_script.R` tests convergent evolution (Fig S4). `5_brain_region_analysis.R` makes per-region morphospace plots (Fig S13-S16)
 
