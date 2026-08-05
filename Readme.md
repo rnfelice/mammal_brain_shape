@@ -14,7 +14,7 @@ across the K-Pg boundary_.
 
 📁 phylogeny_construction: code for building dated supertrees with BEAST 2
 
-📁 ply_ASCII: 
+📁 ply_ASCII: 3D mesh file, used for plotting
 
 📁 scripts: R scripts for comparative analyses including convergent evolution tests
 

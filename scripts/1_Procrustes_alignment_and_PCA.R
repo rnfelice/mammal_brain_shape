@@ -57,12 +57,12 @@ library(rphylopic)
 # SOURCE FUNCTIONS FILE #
 #-----------------------#
 
-# path to Functions.R- contrains additional functions used for handling landmark configurations.
+# path to Functions.R- contains additional functions used for handling landmark configurations.
 
 source(paste("./scripts/utilities/Functions.R", sep = ""))
 
 
-# load in pre-resampled and slid landmarks
+# load in already resampled and slid landmarks
 
 # load landmarks
 n_landmarks <- 122

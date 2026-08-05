@@ -103,7 +103,8 @@ simmap.known.activity_hyp1 <- make.simmap(tree.activity_hyp1, cat_devo.known.act
 
 
 dat.known.activity_hyp1 <- list(data=as.matrix(dataset[tree.activity_hyp1$tip.label,]*1000), 
-                           mass=as.matrix(log(known_activity_data$Mass)))
+                           mass=as.matrix(log(known_activity_data$Mass)),
+                          activity=cat_devo.known.activity_hyp1)
 
 dataset.known.activity <-two.d.array(Y.gpa.endo.activity)
 mass.activity <-data.frame(known_activity_data$Mass)
@@ -115,10 +116,51 @@ system.time(
   fit.known.activity_hyp1 <- mvgls(data~mass, data=dat.known.activity_hyp1, tree=simmap.known.activity_hyp1[[1]], model="BMM", MMSE=TRUE, method = "EmpBayes")
 )
 
-class(simmap.known.activity_hyp1)<-'list'
-results.known.activity_hyp1 <- lapply(simmap.known.activity_hyp1, function(x) mvgls(data~mass, data=dat.known.activity_hyp1, tree=x, model="BMM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
+system.time(
+  fit.known.activity_hyp1_OU <- mvgls(data~activity+mass, data=dat.known.activity_hyp1, tree=simmap.known.activity_hyp1[[1]], model="BMM", MMSE=TRUE, method = "EmpBayes")
+)
 
-params.known.activity_hyp1 <- lapply(results.known.activity_hyp1, function(x) x$param)
+resamp = 3000
+cores = 2
+
+EIC_activity_OU<-EIC(fit.known.activity_hyp1_OU)
+EIC_activity_BM<-EIC(fit.known.activity_hyp1)
+lrt_activity = LRT.gls(fit.known.activity_hyp1, fit.known.activity_hyp1_OU, nsim=resamp, nbcores=cores, REML=FALSE, alternative = TRUE, parametric = FALSE, var_list=c('data','phy','activity'))
+
+eic_sum_activity = rbind(data.frame('bm'=EIC_activity_BM$EIC,'ou'=EIC_activity_OU$EIC),
+data.frame('bm'=EIC_activity_BM$se,'ou'=EIC_activity_OU$se))
+
+which.min(eic_sum_activity[1,])
+eic_sum_activity[1,which.min(eic_sum_activity[1,])] - eic_sum_activity[1,]
+
+system.time(
+  fit.known.activity_hyp1_OU <- mvgls(data~activity+mass, data=dat.known.activity_hyp1, tree=simmap.known.activity_hyp1[[1]], model="BMM", MMSE=TRUE, method = "EmpBayes")
+)
+
+
+
+class(simmap.known.activity_hyp1)<-'list'
+results.known.activity_hyp1_BM <- lapply(simmap.known.activity_hyp1, function(x) mvgls(data~mass, data=dat.known.activity_hyp1, tree=x, model="BMM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
+results.known.activity_hyp1_OU <- lapply(simmap.known.activity_hyp1, function(x) mvgls(data~mass, data=dat.known.activity_hyp1, tree=x, model="OUM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
+
+
+#extract EIC Scores
+
+EIC.activity_hyp1_BM <- lapply(results.known.activity_hyp1_BM, function(fit) {
+  assign("x", fit$variables$tree, envir = .GlobalEnv)
+  on.exit(rm(x, envir = .GlobalEnv), add = TRUE)
+  EIC(fit, nboot = 100L, ncores = 2L)
+})
+
+EIC.activity_hyp1_OU <- lapply(results.known.activity_hyp1_OU, function(fit) {
+  assign("x", fit$variables$tree, envir = .GlobalEnv)
+  on.exit(rm(x, envir = .GlobalEnv), add = TRUE)
+  EIC(fit, nboot = 100L, ncores = 2L)
+})
+
+
+params.known.activity_hyp1_BM <- lapply(results.known.activity_hyp1_BM, function(x) x$param)
+params.known.activity_hyp1_OU <- lapply(results.known.activity_hyp1_OU, function(x) x$param)
 
 combined_params.known.activity_hyp1 <- do.call("rbind",params.known.activity_hyp1)
 
@@ -181,9 +223,24 @@ system.time(
 
 
 class(simmap.known.social_hyp1)<-'list'
-results.known.social_hyp1 <- lapply(simmap.known.social_hyp1, function(x) mvgls(data~mass, data=dat.known.social_hyp1, tree=x, model="BMM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
+results.known.social_hyp1_BM <- lapply(simmap.known.social_hyp1, function(x) mvgls(data~mass, data=dat.known.social_hyp1, tree=x, model="BMM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
+results.known.social_hyp1_OU <- lapply(simmap.known.social_hyp1, function(x) mvgls(data~mass, data=dat.known.social_hyp1, tree=x, model="OUM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
 
-params.known.social_hyp1 <- lapply(results.known.social_hyp1, function(x) x$param)
+
+EIC.social_hyp1_BM <- lapply(results.known.social_hyp1_BM, function(fit) {
+  assign("x", fit$variables$tree, envir = .GlobalEnv)
+  on.exit(rm(x, envir = .GlobalEnv), add = TRUE)
+  EIC(fit, nboot = 100L, ncores = 2L)
+})
+
+EIC.social_hyp1_OU <- lapply(results.known.social_hyp1_OU, function(fit) {
+  assign("x", fit$variables$tree, envir = .GlobalEnv)
+  on.exit(rm(x, envir = .GlobalEnv), add = TRUE)
+  EIC(fit, nboot = 100L, ncores = 2L)
+})
+
+
+params.known.social_hyp1 <- lapply(results.known.social_hyp1_BM, function(x) x$param)
 
 combined_params.known.social_hyp1 <-do.call("rbind",params.known.social_hyp1)
 
@@ -244,6 +301,20 @@ system.time(
 
 class(simmap.known.locomotion_hyp1)<-'list'
 results.known.locomotion_hyp1 <- lapply(simmap.known.locomotion_hyp1, function(x) mvgls(data~mass, data=dat.known.locomotion_hyp1, tree=x, model="BMM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
+results.known.locomotion_hyp1_OU <- lapply(simmap.known.locomotion_hyp1, function(x) mvgls(data~mass, data=dat.known.locomotion_hyp1, tree=x, model="OUM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
+
+
+EIC.locomotion_hyp1_BM <- lapply(results.known.locomotion_hyp1_BM, function(fit) {
+  assign("x", fit$variables$tree, envir = .GlobalEnv)
+  on.exit(rm(x, envir = .GlobalEnv), add = TRUE)
+  EIC(fit, nboot = 100L, ncores = 2L)
+})
+
+EIC.locomotion_hyp1_OU <- lapply(results.known.locomotion_hyp1_OU, function(fit) {
+  assign("x", fit$variables$tree, envir = .GlobalEnv)
+  on.exit(rm(x, envir = .GlobalEnv), add = TRUE)
+  EIC(fit, nboot = 100L, ncores = 2L)
+})
 
 params.known.locomotion_hyp1 <- lapply(results.known.locomotion_hyp1, function(x) x$param)
 
@@ -315,7 +386,23 @@ system.time(
 
 
 class(simmap.known.diet_hyp1)<-'list'
-results.known.diet_hyp1 <- lapply(simmap.known.diet_hyp1, function(x) mvgls(data~mass, data=dat.known.diet_hyp1, tree=x, model="BMM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
+results.known.diet_hyp1_BM <- lapply(simmap.known.diet_hyp1, function(x) mvgls(data~mass, data=dat.known.diet_hyp1, tree=x, model="BMM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
+results.known.diet_hyp1_OU <- lapply(simmap.known.diet_hyp1, function(x) mvgls(data~mass, data=dat.known.diet_hyp1, tree=x, model="OUM", method = "EmpBayes", MMSE=TRUE, error = FALSE))
+
+
+EIC.diet_hyp1_BM <- lapply(results.known.diet_hyp1_BM, function(fit) {
+  assign("x", fit$variables$tree, envir = .GlobalEnv)
+  on.exit(rm(x, envir = .GlobalEnv), add = TRUE)
+  EIC(fit, nboot = 100L, ncores = 2L)
+})
+
+EIC.diet_hyp1_OU <- lapply(results.known.diet_hyp1_OU, function(fit) {
+  assign("x", fit$variables$tree, envir = .GlobalEnv)
+  on.exit(rm(x, envir = .GlobalEnv), add = TRUE)
+  EIC(fit, nboot = 100L, ncores = 2L)
+})
+
+
 
 params.known.diet_hyp1 <- lapply(results.known.diet_hyp1, function(x) x$param)
 

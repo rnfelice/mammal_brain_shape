@@ -696,3 +696,57 @@ order.by.phylo <- function(jumbled.order, phy){
 
 # example:
 # order.by.phylo(rate.matrix, egernia.tree)
+
+
+
+
+
+rate.at.time.df.bifrost <- function(timeslices, obj, plot=F, relative.rates=c("F","mean","median")){
+  # define the timeslices for extracting trait values, and apply it to your tree
+  obj<-obj |> mutate(timestart=depth_start-max(depth_end), timeend=depth_end-max(depth_end))
+  ts <- c(seq(from=min(c(obj$timestart,obj$timeend)), to=max(c(obj$timestart,obj$timeend)), by=timeslices), max(c(obj$timestart,obj$timeend)))
+  
+  # for each timepoint reconstruct the trait value as a function of the distance between the parent and child node
+  Yt <- list()
+  for (i in 1:(length(ts)-1)) {      
+    # which edges overlap timeslice i
+    curr.edges <- filter(obj, timestart <= ts[[i]] & timeend >= ts[[i]])
+    
+    # extract the rates for the branches of interest
+    curr.rates <- curr.edges$value
+    
+    # apply the current slice time
+    slice <- rep(ts[i],times = length(curr.rates))
+    
+    # add all the trait values at timeslice i to the list
+    Yt[[i]] <- cbind(curr.rates, slice)
+  }
+  # remove the fractional period just before the tips (combine the penultimate and ultimate windows)
+  ts2 <- ts[-(length(ts)-1)]
+  
+  # now make a data frame of the trait values at given times
+  shuffled.ages <- NULL
+  for (k in 1:length(ts2)){
+    curr.slice <- unlist(Yt[[k]])
+    curr.slice.df <- data.frame(curr.slice, "time" = ts2[k])
+    shuffled.ages <- rbind(shuffled.ages, curr.slice.df)
+  }
+  
+  # extract just the trait and timeslices
+  rate.time <- shuffled.ages[,c("curr.rates","time")]
+  
+  # reorder the columns so 'time' comes first
+  rate.time <- relocate(rate.time, time)
+  colnames(rate.time) <- c("time", "rate")
+  
+  # rescale rates relative to the mean if requested
+  if(relative.rates=="F"){rate.time$rate <- rate.time$rate}
+  if(relative.rates=="mean"){rate.time$rate <- rate.time$rate/mean(rate.time$rate)}
+  if(relative.rates=="median"){rate.time$rate <- rate.time$rate/median(rate.time$rate)}
+  
+  # plot the values if you're interested, it should look like the horizontal branches of the tree
+  if(plot==T){plot(rate.time$rate ~ rate.time$time, xlab="Time", ylab="Rate", pch=16)}
+  
+  # give up the object
+  return(rate.time)
+}
