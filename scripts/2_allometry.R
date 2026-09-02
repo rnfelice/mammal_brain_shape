@@ -235,3 +235,81 @@ Allometry.olfactory.mass <- procD.pgls(coords ~ log(mass),
     iter = 999, print.progress = FALSE
 )
 summary(Allometry.olfactory.mass)
+
+
+
+############################################################
+
+# Testing slopes among phylogenetic groups - PGLS
+
+# Clade
+Allometry.mass_clade_unique_hyp1 <-procD.pgls(coords ~ log(mass) * clade, f2 = NULL, f3 = NULL, phy = tree_hyp1, logsz = FALSE, data = gdf, 
+                                              iter = 999, print.progress = FALSE, verbose = TRUE)
+Allometry.mass_clade_common_hyp1 <-procD.pgls(coords ~ log(mass) + clade, f2 = NULL, f3 = NULL, phy = tree_hyp1, logsz = FALSE, data = gdf, 
+                                              iter = 999, print.progress = FALSE, verbose = TRUE)
+
+anova(Allometry.mass_clade_common_hyp1, Allometry.mass_clade_unique_hyp1, Allometry.mass_hyp1, print.progress = FALSE)
+
+
+# superorder
+Allometry.mass_superorder_unique_hyp1 <-procD.pgls(coords ~ log(mass) * superorder, f2 = NULL, f3 = NULL, phy = tree_hyp1, logsz = FALSE, data = gdf, 
+                                                   iter = 999, print.progress = FALSE, verbose = TRUE)
+Allometry.mass_superorder_common_hyp1 <-procD.pgls(coords ~ log(mass) + superorder, f2 = NULL, f3 = NULL, phy = tree_hyp1, logsz = FALSE, data = gdf, 
+                                                   iter = 999, print.progress = FALSE, verbose = TRUE)
+
+anova(Allometry.mass_superorder_common_hyp1, Allometry.mass_superorder_unique_hyp1, Allometry.mass_hyp1, print.progress = FALSE)
+
+
+
+# Order
+Allometry.mass_order_unique_hyp1 <-procD.pgls(coords ~ log(mass) * order, f2 = NULL, f3 = NULL, phy = tree_hyp1, logsz = FALSE, data = gdf, 
+                                              iter = 999, print.progress = FALSE, verbose = TRUE)
+Allometry.mass_order_common_hyp1 <-procD.pgls(coords ~ log(mass) + order, f2 = NULL, f3 = NULL, phy = tree_hyp1, logsz = FALSE, data = gdf, 
+                                              iter = 999, print.progress = FALSE, verbose = TRUE)
+
+anova(Allometry.mass_order_common_hyp1, Allometry.mass_order_unique_hyp1, Allometry.mass_hyp1, print.progress = FALSE)
+
+
+
+# Compare allometry models
+# covariance trace
+modComp1_hyp1 <- model.comparison(Allometry.mass_clade_unique_hyp1, Allometry.mass_superorder_unique_hyp1,
+                                  Allometry.mass_order_unique_hyp1, Allometry.mass_hyp1, type = "cov.trace")
+
+summary(modComp1_hyp1)
+
+# log likelihood
+modComp2_hyp1 <- model.comparison(Allometry.mass_clade_unique_hyp1, Allometry.mass_superorder_unique_hyp1,
+                                  Allometry.mass_order_unique_hyp1, Allometry.mass_hyp1, type = "logLik", tol = 1)
+
+summary(modComp2_hyp1)
+
+
+
+
+# Pairwise comparison of allometry slopes between groups
+PWCS1 <- pairwise(Allometry.mass_clade_unique_hyp1, groups = gdf$clade, covariate = NULL, verbose = TRUE)
+summary(PWCS1, confidence = 0.95, test.type = "mdist")
+
+PWCS2 <- pairwise(Allometry.mass_superorder_unique_hyp1, groups = gdf$superorder, covariate = NULL, verbose = TRUE)
+summary(PWCS2, confidence = 0.95, test.type = "mdist")
+
+PWCS3 <- pairwise(Allometry.mass_order_unique_hyp1, groups = gdf$order, covariate = NULL, verbose = TRUE)
+summary(PWCS3, confidence = 0.95, test.type = "mdist") 
+
+
+
+Cov = ape::vcv.phylo(tree_hyp1, corr=T)
+fitGLS <- lm.rrpp(TailLength ~ SVL, data = PlethMorph, Cov = PlethMorph$PhyCov, 
+                  print.progress = FALSE, iter = 999)
+
+Allometry.mass_order_unique_hyp1 <-procD.pgls(coords ~ log(mass) * order, f2 = NULL, f3 = NULL, phy = tree_hyp1, logsz = FALSE, data = gdf, 
+                                              iter = 999, print.progress = FALSE, verbose = TRUE)
+
+fitGLS.clade <- lm.rrpp(coords ~ log(mass) * order, data = gdf, Cov = Cov, 
+                        print.progress = FALSE, iter = 999)
+fitGLS.superorder <- lm.rrpp(coords ~ log(mass) * order, data = gdf, Cov = Cov, 
+                             print.progress = FALSE, iter = 999)
+fitGLS.order <- lm.rrpp(coords ~ log(mass) * order, data = gdf, Cov = Cov, 
+                        print.progress = FALSE, iter = 999)
+

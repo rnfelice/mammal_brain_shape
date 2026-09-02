@@ -395,7 +395,7 @@ p_olfactory <- p_olfactory +
   ) +
   geom_point(shape = 18, size = 2.7, color = "black", x = -140, y = 165) +
   annotate("text",
-    x = -140, y = 170, label = "significant rate shift",
+    x = -140, y = 170, label = "high-probability rate shift",
     hjust = 0, size = 3, family = "Arial"
   ) +
   xlim(-202, 20)

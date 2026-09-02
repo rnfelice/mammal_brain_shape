@@ -1,18 +1,16 @@
 # devtools::install_github("joannabaker/BayesTraitR")
 library(BayesTraitR)
 
-setwd("~/Library/CloudStorage/OneDrive-UniversityCollegeLondon/Project/data/Mammals/analysis/BayesTraits/")
-
 Csize <- read.csv("./input_data/centroid_sizes.csv", row.names = 1)
 
-data <- read.csv("../input_data/mammal_data.csv", row.names = 1)
+data <- read.csv("./input_data/mammal_data.csv", row.names = 1)
 # confirm same order
 data <- data[rownames(Csize), ]
 bodysize <- data[, "Mass", drop = F]
 clade <- data[, "order", drop = F]
 
 # read tree
-tree1 <- read.nexus("./whole_brain/hyp_1/trees/final_tree_hyp1.nex")
+tree1 <- read.nexus("./phylogeny_construction/final_tree_hyp1.nex")
 regression_data <- data.frame(spp.names = rownames(Csize), lnCsize = log(Csize[, 1]), lnMass = log(bodysize[, 1]), lnMassSq = log(bodysize[, 1])^2, order = clade)
 
 createBTjob(

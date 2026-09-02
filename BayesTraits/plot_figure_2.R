@@ -166,6 +166,7 @@ p_shape <- ggtree(tree_with_shape_data, layout = "rectangular", ladderize = T, l
   )
 p_shape <- revts(p_shape)
 p_shape
+p_shape <- p_shape+ geom_vline(xintercept = -66, linewidth = .6, linetype = "longdash", color = "darkgrey", alpha = 0.8)  
 primate_tip_numbers <- which(p_shape$data$label %in% primate_tips)
 whippomorpha_tip_numbers <- which(p_shape$data$label %in% whippomorpha_tips2)
 p_shape$data$label[which(p_shape$data$isTip == TRUE)] <- sub("_", " ", p_shape$data$label[which(p_shape$data$isTip == TRUE)])
@@ -254,7 +255,7 @@ p_shape_composite <- ggdraw() +
   )
 # plot the size rates just to get its dimensions
 
-rjpp_results.size <- process_PPP("./BayesTraits/brainsize/linear_BM/data/brain_body_BM_processed.txt",
+rjpp_results.size <- process_PPP("./BayesTraits/postprocessing/brainsize/linear_BM/brain_body_linear_BM_processed.txt",
   phy = ladderize(time_tree),
   save_summary_trees = F,
   col.palette = "viridis"
@@ -317,6 +318,8 @@ p_size <- revts(ggtree(
   xlim(-202, 7) +
   coord_geo(dat = periods2, neg = F, size = 3, bord = c(), height = unit(1, "line"), abbrv = T, ylim = c(-2, Ntip(time_tree)))
 
+p_size<-p_size +
+geom_vline(xintercept = -max(tree_with_data_just_data$x)+66, linewidth = .6, linetype = "longdash", color = "darkgrey", alpha = 0.8)
 
 p_size_composite <- ggdraw() +
   draw_plot(p_size + annotate("text", x = -4, y = 460, label = "bold(B)", parse = TRUE, size = 8)) +
@@ -368,7 +371,7 @@ legend_plot <- ggplot() +
     shape = 18, size = 2.7, color = "black"
   ) +
   annotate("text",
-    x = 1.1, y = 1, label = "significant rate shift",
+    x = 1.1, y = 1, label = "high-probability rate shift",
     hjust = 0, size = 3, family = "Arial"
   ) +
   theme_void() +
@@ -389,7 +392,7 @@ big_trees_composite <- ggdraw() +
     width = .2,
     height = .2
   ) +
-  draw_plot(legend_plot, x = 0.05, y = 0.60, width = 0.2, height = 0.05)
+  draw_plot(legend_plot, x = 0.02, y = 0.60, width = 0.2, height = 0.05)
 
 
 big_trees_composite

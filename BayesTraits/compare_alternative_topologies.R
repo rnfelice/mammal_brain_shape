@@ -277,7 +277,6 @@ rate_data_wholebrain_8 <- rate_data_wholebrain_8 %>%
   dplyr::rename(., Mean_Rate = Mean.SigV)
 tree_with_wholebrain_8 <- treeio::full_join(time_tree_8, y = rate_data_wholebrain_8, by = "node")
 
-
 p_wholebrain_1 <- ggtree(tree_with_wholebrain_1,
   layout = "rectangular",
   ladderize = T,
@@ -317,13 +316,13 @@ p_wholebrain_1 <- p_wholebrain_1 +
   ) +
   geom_point(shape = 18, size = 2.7, color = "black", x = -152, y = 300) +
   annotate("text",
-    x = -150, y = 300, label = "significant rate shift",
+    x = -150, y = 300, label = "high-probability rate shift",
     hjust = 0, size = 3, family = "Arial"
   ) +
   xlim(-202, 20)
 p_wholebrain_1
 p_wholebrain_1$data$label[which(p_wholebrain_1$data$isTip == TRUE)] <- sub("_", " ", p_wholebrain_1$data$label[which(p_wholebrain_1$data$isTip == TRUE)])
-p_wholebrain_1 <- p_wholebrain_1 + geom_tiplab(align = T, fontface = 3, size = .7, linesize = .2)
+p_wholebrain_1 <- p_wholebrain_1 + geom_tiplab(align = T, fontface = 3, size = .6, linesize = .2)
 
 p_wholebrain_2 <- ggtree(tree_with_wholebrain_2,
   layout = "rectangular",
@@ -348,7 +347,7 @@ p_wholebrain_2 <- p_wholebrain_2 +
   geom_nodepoint(aes(subset = node %in% filter(tree_with_wholebrain_2@extraInfo, Pct.time.scaled >= 50 & Mean.Scalar >= 2)$node),
     col = "black",
     shape = 18,
-    size = 1
+    size = 3
   ) +
   scale_color_manual(values = grey_colors.1, guide = "none") +
   theme(
@@ -364,13 +363,13 @@ p_wholebrain_2 <- p_wholebrain_2 +
   ) +
   geom_point(shape = 18, size = 2.7, color = "black", x = -152, y = 300) +
   annotate("text",
-    x = -150, y = 300, label = "significant rate shift",
+    x = -150, y = 300, label = "high-probability rate shift",
     hjust = 0, size = 3, family = "Arial"
   ) +
   xlim(-202, 20)
 p_wholebrain_2
 p_wholebrain_2$data$label[which(p_wholebrain_2$data$isTip == TRUE)] <- sub("_", " ", p_wholebrain_2$data$label[which(p_wholebrain_2$data$isTip == TRUE)])
-p_wholebrain_2 <- p_wholebrain_2 + geom_tiplab(align = T, fontface = 3, size = .7, linesize = .2)
+p_wholebrain_2 <- p_wholebrain_2 + geom_tiplab(align = T, fontface = 3, size = .6, linesize = .2)
 
 p_wholebrain_3 <- ggtree(tree_with_wholebrain_3,
   layout = "rectangular",
@@ -395,7 +394,7 @@ p_wholebrain_3 <- p_wholebrain_3 +
   geom_nodepoint(aes(subset = node %in% filter(tree_with_wholebrain_3@extraInfo, Pct.time.scaled >= 50 & Mean.Scalar >= 2)$node),
     col = "black",
     shape = 18,
-    size = 1
+    size = 3
   ) +
   scale_color_manual(values = grey_colors.1, guide = "none") +
   theme(
@@ -411,13 +410,13 @@ p_wholebrain_3 <- p_wholebrain_3 +
   ) +
   geom_point(shape = 18, size = 2.7, color = "black", x = -152, y = 300) +
   annotate("text",
-    x = -150, y = 300, label = "significant rate shift",
+    x = -150, y = 300, label = "high-probability rate shift",
     hjust = 0, size = 3, family = "Arial"
   ) +
   xlim(-202, 20)
 p_wholebrain_3
 p_wholebrain_3$data$label[which(p_wholebrain_3$data$isTip == TRUE)] <- sub("_", " ", p_wholebrain_3$data$label[which(p_wholebrain_3$data$isTip == TRUE)])
-p_wholebrain_3 <- p_wholebrain_3 + geom_tiplab(align = T, fontface = 3, size = .7, linesize = .2)
+p_wholebrain_3 <- p_wholebrain_3 + geom_tiplab(align = T, fontface = 3, size = .6, linesize = .2)
 
 p_wholebrain_4 <- ggtree(tree_with_wholebrain_4,
   layout = "rectangular",
@@ -442,7 +441,7 @@ p_wholebrain_4 <- p_wholebrain_4 +
   geom_nodepoint(aes(subset = node %in% filter(tree_with_wholebrain_4@extraInfo, Pct.time.scaled >= 50 & Mean.Scalar >= 2)$node),
     col = "black",
     shape = 18,
-    size = 1
+    size = 3
   ) +
   scale_color_manual(values = grey_colors.1, guide = "none") +
   theme(
@@ -458,13 +457,13 @@ p_wholebrain_4 <- p_wholebrain_4 +
   ) +
   geom_point(shape = 18, size = 2.7, color = "black", x = -152, y = 300) +
   annotate("text",
-    x = -150, y = 300, label = "significant rate shift",
+    x = -150, y = 300, label = "high-probability rate shift",
     hjust = 0, size = 3, family = "Arial"
   ) +
   xlim(-202, 20)
 p_wholebrain_4
 p_wholebrain_4$data$label[which(p_wholebrain_4$data$isTip == TRUE)] <- sub("_", " ", p_wholebrain_4$data$label[which(p_wholebrain_4$data$isTip == TRUE)])
-p_wholebrain_4 <- p_wholebrain_4 + geom_tiplab(align = T, fontface = 3, size = .7, linesize = .2)
+p_wholebrain_4 <- p_wholebrain_4 + geom_tiplab(align = T, fontface = 3, size = .6, linesize = .2)
 
 p_wholebrain_5 <- ggtree(tree_with_wholebrain_5,
   layout = "rectangular",
@@ -489,7 +488,7 @@ p_wholebrain_5 <- p_wholebrain_5 +
   geom_nodepoint(aes(subset = node %in% filter(tree_with_wholebrain_5@extraInfo, Pct.time.scaled >= 50 & Mean.Scalar >= 2)$node),
     col = "black",
     shape = 18,
-    size = 1
+    size = 3
   ) +
   scale_color_manual(values = grey_colors.1, guide = "none") +
   theme(
@@ -505,13 +504,13 @@ p_wholebrain_5 <- p_wholebrain_5 +
   ) +
   geom_point(shape = 18, size = 2.7, color = "black", x = -152, y = 300) +
   annotate("text",
-    x = -150, y = 300, label = "significant rate shift",
+    x = -150, y = 300, label = "high-probability rate shift",
     hjust = 0, size = 3, family = "Arial"
   ) +
   xlim(-202, 20)
 p_wholebrain_5
 p_wholebrain_5$data$label[which(p_wholebrain_5$data$isTip == TRUE)] <- sub("_", " ", p_wholebrain_5$data$label[which(p_wholebrain_5$data$isTip == TRUE)])
-p_wholebrain_5 <- p_wholebrain_5 + geom_tiplab(align = T, fontface = 3, size = .7, linesize = .2)
+p_wholebrain_5 <- p_wholebrain_5 + geom_tiplab(align = T, fontface = 3, size = .6, linesize = .2)
 
 p_wholebrain_6 <- ggtree(tree_with_wholebrain_6,
   layout = "rectangular",
@@ -536,7 +535,7 @@ p_wholebrain_6 <- p_wholebrain_6 +
   geom_nodepoint(aes(subset = node %in% filter(tree_with_wholebrain_6@extraInfo, Pct.time.scaled >= 50 & Mean.Scalar >= 2)$node),
     col = "black",
     shape = 18,
-    size = 1
+    size = 3
   ) +
   scale_color_manual(values = grey_colors.1, guide = "none") +
   theme(
@@ -552,13 +551,13 @@ p_wholebrain_6 <- p_wholebrain_6 +
   ) +
   geom_point(shape = 18, size = 2.7, color = "black", x = -152, y = 300) +
   annotate("text",
-    x = -150, y = 300, label = "significant rate shift",
+    x = -150, y = 300, label = "high-probability rate shift",
     hjust = 0, size = 3, family = "Arial"
   ) +
   xlim(-202, 20)
 p_wholebrain_6
 p_wholebrain_6$data$label[which(p_wholebrain_6$data$isTip == TRUE)] <- sub("_", " ", p_wholebrain_6$data$label[which(p_wholebrain_6$data$isTip == TRUE)])
-p_wholebrain_6 <- p_wholebrain_6 + geom_tiplab(align = T, fontface = 3, size = .7, linesize = .2)
+p_wholebrain_6 <- p_wholebrain_6 + geom_tiplab(align = T, fontface = 3, size = .6, linesize = .2)
 
 p_wholebrain_7 <- ggtree(tree_with_wholebrain_7,
   layout = "rectangular",
@@ -583,7 +582,7 @@ p_wholebrain_7 <- p_wholebrain_7 +
   geom_nodepoint(aes(subset = node %in% filter(tree_with_wholebrain_7@extraInfo, Pct.time.scaled >= 50 & Mean.Scalar >= 2)$node),
     col = "black",
     shape = 18,
-    size = 1
+    size = 3
   ) +
   scale_color_manual(values = grey_colors.1, guide = "none") +
   theme(
@@ -599,13 +598,13 @@ p_wholebrain_7 <- p_wholebrain_7 +
   ) +
   geom_point(shape = 18, size = 2.7, color = "black", x = -152, y = 300) +
   annotate("text",
-    x = -150, y = 300, label = "significant rate shift",
+    x = -150, y = 300, label = "high-probability rate shift",
     hjust = 0, size = 3, family = "Arial"
   ) +
   xlim(-202, 20)
 p_wholebrain_7
 p_wholebrain_7$data$label[which(p_wholebrain_7$data$isTip == TRUE)] <- sub("_", " ", p_wholebrain_7$data$label[which(p_wholebrain_7$data$isTip == TRUE)])
-p_wholebrain_7 <- p_wholebrain_7 + geom_tiplab(align = T, fontface = 3, size = .7, linesize = .2)
+p_wholebrain_7 <- p_wholebrain_7 + geom_tiplab(align = T, fontface = 3, size = .6, linesize = .2)
 
 p_wholebrain_8 <- ggtree(tree_with_wholebrain_8,
   layout = "rectangular",
@@ -630,7 +629,7 @@ p_wholebrain_8 <- p_wholebrain_8 +
   geom_nodepoint(aes(subset = node %in% filter(tree_with_wholebrain_8@extraInfo, Pct.time.scaled >= 50 & Mean.Scalar >= 2)$node),
     col = "black",
     shape = 18,
-    size = 1
+    size = 3
   ) +
   scale_color_manual(values = grey_colors.1, guide = "none") +
   theme(
@@ -646,19 +645,19 @@ p_wholebrain_8 <- p_wholebrain_8 +
   ) +
   geom_point(shape = 18, size = 2.7, color = "black", x = -152, y = 300) +
   annotate("text",
-    x = -150, y = 300, label = "significant rate shift",
+    x = -150, y = 300, label = "high-probability rate shift",
     hjust = 0, size = 3, family = "Arial"
   ) +
   xlim(-202, 20)
 p_wholebrain_8
 p_wholebrain_8$data$label[which(p_wholebrain_8$data$isTip == TRUE)] <- sub("_", " ", p_wholebrain_8$data$label[which(p_wholebrain_8$data$isTip == TRUE)])
-p_wholebrain_8 <- p_wholebrain_8 + geom_tiplab(align = T, fontface = 3, size = .7, linesize = .2)
+p_wholebrain_8 <- p_wholebrain_8 + geom_tiplab(align = T, fontface = 3, size = .6, linesize = .2)
 
 # Export:
 
 
 showtext_auto()
-showtext_opts(dpi = 300)
+showtext_opts(dpi = 600)
 
 for (i in 1:8) {
   plot_obj <- get(paste0("p_wholebrain_", i))
@@ -671,7 +670,8 @@ for (i in 1:8) {
   dev.off()
   ggsave(
     filename = paste0("./Images/Figures/Figure_wholebrain_hyp_", i, ".tif"), plot_obj,
-    width = 7, height = 9, units = "in"
+    width = 7, height = 9, 
+    dpi = 600, units = "in"
   )
 }
 

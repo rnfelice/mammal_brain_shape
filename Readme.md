@@ -1,6 +1,5 @@
 # Data and Code from Knapp et al.
-This repository contains all data and code for carrying out the analyses in _Rapid evolution of mammalian brain shape precedes encephalization
-across the K-Pg boundary_. 
+This repository contains all data and code for carrying out the analyses in _Mammal brain shape diversity evolved in rapid bursts_. 
 
 ## Overview:
 
@@ -40,14 +39,15 @@ Finally, several R scripts provide the analysis and plotting code for the result
 
     📦input_data
     ┣ 📂plotting_links
-    ┣ 📜Proc.endo.mammals.rda
     ┣ 📜centroid_sizes.csv
+    ┣ 📜lmk_module_guide.csv
     ┣ 📜mammal_data.csv
     ┣ 📜mammaltree4705_editednames.nex
+    ┣ 📜Proc.endo.mammals.rda
     ┣ 📜procrutes_aligned_coords.csv
     ┗ 📜raw_landmark_coords.csv
 
-📂plotting_links contains files for making connections between landmark points in plots (e.g., Figs S13-S16). `Proc.endo.mammals.rda` is the raw output of Procrustes alignment containing coordinates, centroid size, mean shape, etc. `centroid_sizes.csv` contains the centroid size of landmark configurations. `mammal_data.csv` contains the taxonomic, ecological, life history, and body size data for all taxa. Importantly, this file also contains links to the original source files for the 3D scan and/or 3D model data for each specimen in the dataset. `mammaltree4705_editednames.nex` is the phylogeny from Alvarez Carretero et al with genus names modified to be capitalized. `procrutes_aligned_coords.csv` contains the Procrustes-aligned landmark configurations whereas `raw_landmark_coords.csv` is the landmark data with semilandmarks having been slid to minimize bending energy but not yet Procrustes aligned.
+📂plotting_links contains files for making connections between landmark points in plots (e.g., Figs S13-S16). `Proc.endo.mammals.rda` is the raw output of Procrustes alignment containing coordinates, centroid size, mean shape, etc. `centroid_sizes.csv` contains the centroid size of landmark configurations. `mammal_data.csv` contains the taxonomic, ecological, life history, and body size data for all taxa. Importantly, this file also contains links to the original source files for the 3D scan and/or 3D model data for each specimen in the dataset. `mammaltree4705_editednames.nex` is the phylogeny from [Álvarez-Carretero et al (2022)](https://doi.org/10.1038/s41586-021-04341-1) with genus names modified to be capitalized. `procrutes_aligned_coords.csv` contains the Procrustes-aligned landmark configurations whereas `raw_landmark_coords.csv` is the landmark data with semilandmarks having been slid to minimize bending energy but not yet Procrustes aligned. `lmk_module_guide.csv` specifies the modularity hypotheses (i.e., which landmarks correspond to which phenotypic module). This is used as input data for `scripts/6_modularity_test_endocast.R`.
 
 ---
 
@@ -60,6 +60,7 @@ Finally, several R scripts provide the analysis and plotting code for the result
 
     📦phylogeny_construction
     ┣ 📂BEAST2
+    ┣ 📂input_trees
     ┣ 1_initial_tree_construction.R
     ┣ 2_FS_taxa_graft.R
     ┣ 3_marsupial_graft.R
@@ -70,6 +71,8 @@ Finally, several R scripts provide the analysis and plotting code for the result
 
 
 The first four numbered scripts build an informal supertree by grafting together three dated phylogenies and several additional tips. We then carry out a tip-dating analysis using BEAST2. First we used BEAUTi to make `BEAST2/initial_beast_input_file.xml`, then the script `5_make_additional_tip_and_node_priors.R` produces several other xml files containing additional priors for the BEAST analysis and writes them into the 📁 BEAST2 folder. We then manually edited BEAST xml file, adding those additional priors, to make `BEAST2/updated_beast_input_file.xml`. That xml is executed in BEAST2, producing a posterior distribution of trees. We used TreeAnnotator to produce a single summary tree (maximum clade credibility with mean node heights). Finally, `6_make_alternative_toplogies.R` uses the `move.lineage` function in the RRPhylo R package to create alternative phylogenetic hypotheses by moving clades with uncertain phylogenetic affinities to alternative parts of the tree. the folder 📁 input_trees contains the published time trees used to assemble our supertree topology. The results are the 8 numbered nexus files `final_tree_hyp1.nex` through `final_tree_hyp8.nex` which are used for all comparative analyses and evolutionary models. 
+
+The maximum clade credibility tree of the posterior distribution from the BEAST analysis (i.e., a time-scaled phylogeny of Mammalia with 4705 extant and 122 extinct tips) is `BEAST2\supertree_mcc.trees`.
 
 ---
 
@@ -87,7 +90,8 @@ The first four numbered scripts build an informal supertree by grafting together
     ┣ 📜2_allometry.R
     ┣ 📜3_PhySig_and_rates.R
     ┣ 📜4_convergent_evolution_script.R
-    ┗ 📜5_brain_region_analysis.R
+    ┣ 📜5_brain_region_analysis.R
+    ┗ 📜6_modularity_test_endocast.R
 
-📂utilities contains utility functions for reading and manipulating landmark data, model comparison including calculating and plotting BayesFactors, and functions for reading BayesTraits results into R.`1_Procrustes_alignment_and_PCA.R` Carries out PCA and make morphospace plots. `2_allometry.R` fits phylogenetic regressions to test allometric effects. `3_PhySig_and_rates.R` calculates phylogenetic signal evolutionary rates (sigma mult). `4_convergent_evolution_script.R` tests convergent evolution (Fig S4). `5_brain_region_analysis.R` makes per-region morphospace plots (Fig S13-S16)
+📂utilities contains utility functions for reading and manipulating landmark data, model comparison including calculating and plotting BayesFactors, and functions for reading BayesTraits results into R.`1_Procrustes_alignment_and_PCA.R` Carries out PCA and make morphospace plots. `2_allometry.R` fits phylogenetic regressions to test allometric effects, including heterogenity of slopes tests. `3_PhySig_and_rates.R` calculates phylogenetic signal evolutionary rates (sigma mult). `4_convergent_evolution_script.R` tests convergent evolution (Fig S4). `5_brain_region_analysis.R` makes per-region morphospace plots (Fig S13-S16). `6_modularity_test_endocast.R` carries out analyses of phenotypic modularity.
 
