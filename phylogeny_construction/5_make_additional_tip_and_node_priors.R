@@ -14,7 +14,7 @@ library(RRphylo)
 # this is the time-calibrated mean tree from Alvarez-Carretero et al
 time_tree <- read.nexus(file = "./input_data/mammaltree4705_editednames.nex")
 
-# this is the tree with uncalibrated node dates that contains all
+# this is the tree with uncalibrated node dates that contains all 4705 extant tips plus all the fossils in our dataset
 grafted_tree <- read.nexus(file = "./input_data/merged_tree.nex")
 
 # import species data

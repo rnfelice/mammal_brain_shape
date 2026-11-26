@@ -19,7 +19,7 @@ stones_file_table <- data.frame(filepath = stones_files) %>%
     brain_region = str_extract(filepath, "^[^/]+"),
     tree         = str_extract(filepath, "(?<=hyp_)[1-8]"),
     rate_type    = str_extract(filepath, "(?<=SCORES_)(single_rate|var_rate)"),
-    evo_model    = str_extract(filepath, "(?<=tree)(BM|OU|delta|kappa|lambda)"),
+    evo_model    = str_extract(filepath, "(?<=tree)(BM|delta|kappa|lambda)"),
     run          = str_extract(filepath, "(?<=_)([ab])(?=_run)"),
     filename     = basename(filepath)
   )
@@ -118,7 +118,7 @@ stones_file_table_size <- stones_file_table_size %>%
   mutate(
     tree = 1,
     rate_type = "Variable Rates",
-    evo_model = str_extract(filepath, "(?<=_)(BM|OU|delta|kappa|lambda)(?=/Brain)"),
+    evo_model = str_extract(filepath, "(?<=_)(BM|delta|kappa|lambda)(?=/Brain)"),
     run = str_extract(filepath, "(?<=BT-)(\\d+)(?=\\.txt\\.Stones)"),
     regression_type = str_extract(filepath, "(?<=/)[^/_]+(?=_)")
   )

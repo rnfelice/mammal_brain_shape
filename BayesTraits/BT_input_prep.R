@@ -75,7 +75,7 @@ write_cmd_file <- function(x, varrate = TRUE, run, model = "BM", folder) {
 }
 
 
-list_of_models <- c("BM", "OU", "lambda", "kappa", "delta")
+list_of_models <- c("BM", "lambda", "kappa", "delta")
 
 runs <- c("a", "b") # do two runs of each so that you can check convergence at the end
 
